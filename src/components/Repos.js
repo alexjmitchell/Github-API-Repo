@@ -1,5 +1,6 @@
 import React from "react"
-import * as moment from 'moment'
+import * as moment from "moment"
+import Icon from "../lib/Icon"
 
 function Repos(props) {
   return (
@@ -13,7 +14,7 @@ function Repos(props) {
         <li>Followers</li>
         <li>Following</li>
       </ul>
-      <form>
+      <form className="forms">
         <input type="text" placeholder="Find a repository..." />
         <select name="type">
           <optgroup label="Select type">
@@ -33,6 +34,10 @@ function Repos(props) {
             <option value="HTML">HTML</option>
           </optgroup>
         </select>
+        <button className="new-button">
+          <Icon icon={"book"} />
+          New
+        </button>
       </form>
       <ul className="repos">
         {props.repos.map((repo, i) => (
@@ -43,14 +48,21 @@ function Repos(props) {
               rel="noopener noreferrer"
               key={"repo-" + i}
             >
-              <li>{repo.name}</li>
+              <li><h3>{repo.name}</h3></li>
             </a>
             <div className="repo-details">
               <p className="languages">
                 <div className={repo.language}></div>
                 {repo.language}
               </p>
+              <Icon icon="code-fork" />
               <div>{moment(repo.updated_at).fromNow()}</div>
+            </div>
+            <div className="star">
+              <button className="star-button">
+                <Icon icon="star" />
+                &nbsp;Star
+              </button>
             </div>
           </div>
         ))}

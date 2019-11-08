@@ -18,7 +18,7 @@ function User(props) {
           <Icon icon="map-marker" />
           <p>Las Vegas, Nevada</p>
         </aside>
-        <button>Edit Profile</button>
+        <button className="profile-button">Edit Profile</button>
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import store from "../redux-store/store"
 import { useGithub } from "../redux-store/Vendors/Github"
 import User from "./User"
 import Repos from "./Repos"
+import Navigation from './Navigation'
 
 function Wrap() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Navigation />
       <div className="container">
         <User {...user} />
         <Repos repos={repos} />
