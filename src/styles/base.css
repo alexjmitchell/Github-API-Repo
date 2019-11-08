@@ -21,4 +21,74 @@ code {
     monospace;
 }
 
+.container {
+  display: grid;
+  margin: auto;
+  width: 1200px;
+  grid-template-columns: 1fr 2fr;
+}
 
+i {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.profile img {
+  width: 260px;
+}
+
+.email, .location {
+  display: flex;
+  align-items: center;
+}
+
+div.JavaScript {
+  height: 10px;
+  width: 10px;
+  background: #F1E05A;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+div.HTML {
+  background: #E34C26;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.repo-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding: 20px 5px;
+}
+
+.repo-details {
+  display: flex;
+  align-items: center;
+}

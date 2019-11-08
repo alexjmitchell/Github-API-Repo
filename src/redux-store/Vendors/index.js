@@ -1,1 +1,1 @@
-export { default as Reducer } from "./Component_Name"
+export { default as Reducer } from "./Github"
